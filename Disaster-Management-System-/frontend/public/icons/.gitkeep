@@ -1,0 +1,7 @@
+# Place PWA icon files here
+# Required:
+#   icon-192.png  (192x192 PNG)
+#   icon-512.png  (512x512 PNG)
+#
+# These are referenced in manifest.webmanifest
+# Generate icons using a PWA icon generator or your design assets.

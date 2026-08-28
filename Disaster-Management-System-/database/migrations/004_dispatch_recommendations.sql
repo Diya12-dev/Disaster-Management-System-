@@ -1,0 +1,23 @@
+-- Migration: 004_dispatch_recommendations.sql
+-- TODO: Create dispatch_recommendations and volunteer_assignments tables
+
+-- CREATE TABLE IF NOT EXISTS dispatch_recommendations (
+--     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--     incident_id UUID NOT NULL,
+--     priority_score NUMERIC(5,2) NOT NULL,
+--     recommended_resources JSONB,
+--     reasoning TEXT,
+--     generated_at TIMESTAMPTZ DEFAULT NOW(),
+--     accepted_at TIMESTAMPTZ,
+--     accepted_by UUID
+-- );
+
+-- CREATE TABLE IF NOT EXISTS volunteer_assignments (
+--     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--     volunteer_id UUID NOT NULL,
+--     incident_id UUID NOT NULL,
+--     dispatch_id UUID REFERENCES dispatch_recommendations(id),
+--     status VARCHAR(20) DEFAULT 'assigned' CHECK (status IN ('assigned', 'en_route', 'on_site', 'completed', 'cancelled')),
+--     assigned_at TIMESTAMPTZ DEFAULT NOW(),
+--     completed_at TIMESTAMPTZ
+-- );

@@ -1,0 +1,21 @@
+-- Migration: 002_citizen_reports.sql
+-- TODO: Create citizen_reports table with geospatial location support
+
+-- CREATE TABLE IF NOT EXISTS citizen_reports (
+--     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+--     reporter_name TEXT,
+--     reporter_phone TEXT,
+--     description TEXT NOT NULL,
+--     severity VARCHAR(20) NOT NULL CHECK (severity IN ('LOW', 'MEDIUM', 'HIGH', 'CRITICAL')),
+--     location GEOGRAPHY(POINT, 4326) NOT NULL,
+--     address TEXT,
+--     media_urls TEXT[],
+--     status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'verified', 'resolved', 'rejected')),
+--     verified_by UUID,
+--     created_at TIMESTAMPTZ DEFAULT NOW(),
+--     updated_at TIMESTAMPTZ DEFAULT NOW()
+-- );
+
+-- CREATE INDEX IF NOT EXISTS idx_citizen_reports_location ON citizen_reports USING GIST (location);
+-- CREATE INDEX IF NOT EXISTS idx_citizen_reports_status ON citizen_reports (status);
+-- CREATE INDEX IF NOT EXISTS idx_citizen_reports_created_at ON citizen_reports (created_at DESC);

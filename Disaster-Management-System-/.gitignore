@@ -1,0 +1,78 @@
+# OS & editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.suo
+*.user
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+*.env.example.local
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.vite/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+*.egg
+.venv/
+venv/
+env/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+
+# AI model weights & large binaries
+ai/models/*.pt
+ai/models/*.onnx
+ai/models/*.weights
+ai/uploads/*
+ai/outputs/*
+!ai/uploads/.gitkeep
+!ai/outputs/.gitkeep
+!ai/models/.gitkeep
+
+# Data (large files)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Supabase local
+.supabase/

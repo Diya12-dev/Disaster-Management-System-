@@ -1,0 +1,2 @@
+# Place YOLOv8 model weight files here (.pt, .onnx, .weights)
+# These files are excluded from git — see root .gitignore
